@@ -12,13 +12,10 @@ pipeline {
 		stage ('Demo App') {
             steps {
 			dir(path: "/home/ec2-user/pranav"){
-                rtMavenRun (
-                    tool: Maven_Home, // Tool name from Jenkins configuration
-                    pom: '/home/ec2-user/pranav/pom.xml',
-                    goals: 'clean install',
-                    deployerId: "MAVEN_DEPLOYER",
-                    resolverId: "MAVEN_RESOLVER"
-                )
+                
+				withMaven(maven: 'Maven_Home', publishStrategy: 'EXPLICIT')
+                   sh 'mvn -f /home/ec2-user/pranav/pom.xml install'
+                
 				}
             }
 			
