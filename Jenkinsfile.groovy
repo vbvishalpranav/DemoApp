@@ -3,9 +3,25 @@ pipeline {
     stages {
         stage ('Clone') {
             steps {
+			dir(path: "/home/ec2-user/pranav"){
             //    git branch: 'master', url: "https://github.com/jfrog/project-examples.git"
 			    checkout scm
+				}
             }
+        }
+		stage ('Demo App') {
+            steps {
+			dir(path: "/home/ec2-user/pranav"){
+                rtMavenRun (
+                    tool: Maven_Home, // Tool name from Jenkins configuration
+                    pom: 'DemoApp/CR/pom.xml',
+                    goals: 'clean install',
+                    deployerId: "MAVEN_DEPLOYER",
+                    resolverId: "MAVEN_RESOLVER"
+                )
+				}
+            }
+			
         }
 
         stage ('Artifactory configuration') {
@@ -32,17 +48,7 @@ pipeline {
             }
         }
 
-        stage ('Exec Maven') {
-            steps {
-                rtMavenRun (
-                    tool: MAVEN_TOOL, // Tool name from Jenkins configuration
-                    pom: 'maven-examples/maven-example/pom.xml',
-                    goals: 'clean install',
-                    deployerId: "MAVEN_DEPLOYER",
-                    resolverId: "MAVEN_RESOLVER"
-                )
-            }
-        }
+
 
         stage ('Publish build info') {
             steps {
