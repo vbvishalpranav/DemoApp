@@ -13,8 +13,9 @@ pipeline {
             steps {
 			dir(path: "/home/ec2-user/pranav"){
                 
-				withMaven(maven: 'Maven_Home', publisherStrategy: 'EXPLICIT')
+				withMaven(maven: 'Maven_Home', publisherStrategy: 'EXPLICIT') {
                    sh 'mvn -f /home/ec2-user/pranav/pom.xml install'
+				   }
                 
 				}
             }
