@@ -19,11 +19,11 @@
             </plugin>
         </plugins> 
  </build>
-   <distributionManagement>
+<distributionManagement>
     <snapshotRepository>
-      <id>Demo_snapshot</id>
-      <name>Demo_snapshot</name>
-      <url>https://vbrt01.jfrog.io/repositories/local/Demo_snapshot</url>
+        <id>snapshots</id>
+        <name>a0g51c7grs5dg-artifactory-primary-0-snapshots</name>
+        <url>https://vbrt01.jfrog.io/artifactory/Demo_snapshot</url>
     </snapshotRepository>
-  </distributionManagement>
+</distributionManagement>
 </project>
