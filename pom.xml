@@ -23,7 +23,7 @@
     <snapshotRepository>
       <id>Demo_snapshot</id>
       <name>Demo_snapshot</name>
-      <url>https://vbrt01.jfrog.io/ui/admin/repositories/local</url>
+      <url>https://vbrt01.jfrog.io/repositories/local/Demo_snapshot</url>
     </snapshotRepository>
   </distributionManagement>
 </project>
