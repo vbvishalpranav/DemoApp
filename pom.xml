@@ -23,7 +23,7 @@
     <snapshotRepository>
         <id>snapshots</id>
         <name>a0g51c7grs5dg-artifactory-primary-0-snapshots</name>
-        <url>http://3.110.114.165:8082/ui/admin/repositories/local/Demo_snapshot</url>
+        <url>http://3.110.114.165:8082/repositories/local/Demo_snapshot</url>
     </snapshotRepository>
 </distributionManagement>
 </project>
