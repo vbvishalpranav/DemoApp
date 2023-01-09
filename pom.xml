@@ -22,8 +22,8 @@
 <distributionManagement>
     <snapshotRepository>
         <id>snapshots</id>
-        <name>Demo-snapshot</name>
-        <url>http://3.110.114.165:8082/repositories/local/Demo_snapshot</url>
+        <name>Demo_snapshot</name>
+        <url>http://3.110.114.165:8082/artifactory/Demo_snapshot</url>
     </snapshotRepository>
 </distributionManagement>
 </project>
