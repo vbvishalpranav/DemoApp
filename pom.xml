@@ -22,8 +22,8 @@
 <distributionManagement>
     <snapshotRepository>
         <id>snapshots</id>
-        <name>Demo_snapshot</name>
-        <url>http://3.110.114.165:8082/artifactory/Demo_snapshot</url>
+        <name>ip-172-31-8-63.ap-south-1.compute.internal-snapshots</name>
+        <url>http://3.110.114.165:8081/artifactory/Demo_snapshot</url>
     </snapshotRepository>
 </distributionManagement>
 </project>
